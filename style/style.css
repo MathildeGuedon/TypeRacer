@@ -1,0 +1,427 @@
+/**
+ * Reset
+ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * Eléments génériques
+ */
+
+body {
+    --color-primary: #154C79;
+    --color-secondary: #447094;
+    --color-tertiary: #dadada;
+}
+
+/* Mise en forme des titres */
+h1 {
+    margin: 10px;
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--color-primary);
+}
+
+h2 {
+    margin: 10px;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-secondary);
+}
+
+h3 {
+    margin: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+/* Mise en forme des formulaires */
+input[type="radio"] {
+    filter: grayscale(1);
+    /* Grayscale passe le bouton en niveau de gris */
+}
+
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    margin-right: 10px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--color-primary);
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+    color: var(--color-secondary);
+    opacity: 50%;
+}
+
+button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: -1px 1px 5px var(--color-primary);
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--color-secondary);
+    background-color: white;
+}
+
+button:hover {
+    color: var(--color-primary);
+    background-color: var(--color-tertiary);
+    cursor: pointer;
+}
+
+button:focus {
+    background-color: var(--color-tertiary);
+    border: 3px solid var(--color-primary);
+    padding: 2px;
+
+}
+
+/**
+ * Eléments principaux
+ */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    min-width: 200px;
+    margin-bottom: 50px;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 30px;
+    background-color: var(--color-secondary);
+}
+
+footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 30px;
+    font-weight: 600;
+    font-size: 17px;
+    color: white;
+    background-color: var(--color-secondary);
+}
+
+abbr {
+    text-decoration: none;
+}
+
+/**
+ * Mise en forme des éléments de la zone principale
+ */
+
+.zonePrepaJeu {
+    width: 100%;
+}
+
+.zoneJoueur {
+    text-align: left;
+}
+
+.zoneOptions {
+    position: relative;
+    width: 50%;
+    margin: 30px auto;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    border: 2px, var(--color-tertiary), solid;
+}
+
+.optionSource,
+.optionChrono {
+    display: flex;
+    margin: 20px;
+    justify-content: space-evenly;
+}
+
+.optionSource input[type="radio"]:not(:first-child),
+.optionChrono input[type="radio"]:not(:first-child) {
+    margin-left: 20px;
+}
+
+.zoneOptions legend {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    /* Centre horizontalement */
+    transform: translateX(-50%);
+    /* Ajuste le centrage */
+}
+
+/* Zone ou sera affiché le texte (touche ou mot) à recopier */
+.zoneProposition {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0 10px 0;
+    padding: 15px;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Zone de saisie */
+.zoneSaisie {
+    /* display: flex;
+    justify-content: space-between; */
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+/* Eléments du formulaire de saisie */
+.zoneSaisie input[type="text"] {
+    /* width: 75%; */
+    border-radius: 20px;
+}
+
+/* .zoneSaisie button {
+    width: 25%;
+} */
+
+/* Eléments de la barre de score */
+.mesureScoreTemps {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.zoneScore,
+.zoneTemps {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.barreProgression {
+    position: relative;
+    width: 100%;
+    height: 12px;
+    border-radius: 8px;
+    border: 2px, var(--color-tertiary), solid;
+    /* z-index: 1; */
+}
+
+.barreNbProposition {
+    position: absolute;
+    background-color: var(--color-primary);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    /* z-index: 2; */
+}
+
+.barreScore {
+    position: absolute;
+    background-color: var(--color-tertiary);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 100%;
+    /* z-index: 3; */
+}
+
+/* Zones des boutons d'ouverture des popup */
+.zoneBtnPopup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 10%;
+}
+
+.zoneBtnPopup button {
+    border-radius: 15px;
+}
+
+.zoneBtnPopup abbr {
+    font-size: 1.7em;
+}
+
+.zoneClassement,
+.zoneProgression,
+.zonePartage {
+    padding-top: 20px;
+}
+
+.zoneReinitialisation {
+    width: 100%;
+    text-align: right;
+    padding-top: 30px;
+}
+
+.zoneReinitialisation button {
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* Gestion des popups */
+
+.popupBackground,
+.popupClassement,
+.popupNomDuJoueur,
+.popupProgression,
+.popupEntreeClassement {
+    display: none;
+    position: fixed;
+    /*l'arrière-plan de la fenêtre popup prend tout l'écran*/
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: var(--color-secondary);
+    border-radius: 30px;
+    z-index: 1;
+}
+
+
+
+.active {
+    display: flex !important;
+}
+
+.popup p {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.popup div {
+    font-size: 25px;
+    padding: 5px 5px 15px;
+}
+
+.popup input {
+    margin-bottom: 20px;
+}
+
+.popup button {
+    margin: 5px;
+}
+
+.popupClassement .popup {
+    padding: 20px 5px 0;
+}
+
+/* Affichage du tableau de classement */
+#tableauClassement {
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#tableauClassement table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px auto 0;
+    color: var(--color-primary);
+    font-size: 14px;
+    background-color: var(--color-tertiary);
+    border: none;
+    border-radius: 15px;
+    box-shadow: -1px 1px 5px var(--color-primary);
+    overflow: hidden;
+}
+
+#tableauClassement th,
+#tableauClassement td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    min-width: 30px;
+    max-width: 130px;
+    overflow-wrap: anywhere;
+}
+
+#tableauClassement th {
+    background-color: var(--color-tertiary);
+    font-weight: bold;
+}
+
+#tableauClassement tr:nth-child(even) {
+    background-color: white;
+}
+
+/* Graphique de progression*/
+
+#graphiqueProgression {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: -1px 1px 5px var(--color-primary);
+}
+
+/** 
+ * Responsive
+ */
+
+
+/* En dessous de 1200 px */
+@media screen and (max-width: 1200px) {
+    main {
+        width: 60%;
+        padding: 30px;
+    }
+}
+
+
+/* En dessous de 800 px */
+@media screen and (max-width: 800px) {
+    main {
+        width: 90%;
+        padding: 10px;
+    }
+}
