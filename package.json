@@ -1,0 +1,31 @@
+{
+  "name": "typeracer",
+  "version": "1.0.0",
+  "description": "Application web pour s'initier à la dactylographie",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "http-server",
+    "lint": "eslint *.js"
+  },
+  "keywords": [
+    "apprentissage",
+    "dactylographie",
+    "rapidité",
+    "progression",
+    "jeu"
+  ],
+  "author": [
+    "Mathilde Guédon",
+    "David Pierru (https://github.com/OpenClassrooms-Student-Center/7696886-javascript/tree/main)"
+  ],
+  "license": "CC-BY-SA-4.0",
+  "dependencies": {
+    "chart.js": "^4.4.9"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.27.0",
+    "eslint": "^9.27.0",
+    "globals": "^16.2.0"
+  }
+}

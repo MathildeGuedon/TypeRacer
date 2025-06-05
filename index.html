@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Booste ta vitesse de frappe avec TypeRacer. Entraîne-toi à taper rapidement et précisément grâce à des exercices variés et un chronomètre intégré.">
+    <title>TypeRacer - Dactylographie efficace</title>
+    <!-- Inclusion du fichier css pour le style du jeu -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Inclusion des 5 scripts nécessaires pour faire fonctionner le jeu -->
+    <!-- Attention, l'ordre des fichiers js est important.  -->
+    <script src="node_modules/chart.js/dist/chart.umd.js" defer></script>
+    <script src="scripts/config.js" defer></script>
+    <script src="scripts/popup.js" defer></script>
+    <script src="scripts/script.js" defer></script>
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header>
+        <h1>TypeRacer</h1>
+        <h2>L'application pour s'entraîner à dactylographier !</h2>
+        <h3>TypeRacer est une application pour apprendre à taper rapidement sans regarder ton clavier 💻</h3>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <section class="zonePrepaJeu">
+            <div class="zoneJoueur">
+                <button id="btnModifierJoueur"><abbr title="Changer de joueur">Joueur</abbr></button>
+            </div>
+            <fieldset class="zoneOptions">
+                <div class="choixOptions">
+                    <div class="optionSource">
+                        <div class="sourceTouches radio">
+                            <input type="radio" name="optionSource" id="touches" value="1" checked>
+                            <label for="touches">Touches</label>
+                        </div>
+                        <div class="sourceMots radio">
+                            <input type="radio" name="optionSource" id="mots" value="2">
+                            <label for="mots">Mots</label>
+                        </div>
+                    </div>
+                    <div class="optionChrono">
+                        <div class="ChronoMinute radio">
+                            <input type="radio" name="optionChrono" id="uneMinute" value="1" checked>
+                            <label for="uneMinute">Chrono</label>
+                        </div>
+                        <div class="chronoMots radio">
+                            <input type="radio" name="optionChrono" id="dixMots" value="2">
+                            <label for="dixMots">Défi</label>
+                        </div>
+                    </div>
+                </div>
+                <legend><button id="btnValiderOptions">Commencer</button></legend>
+            </fieldset>
+        </section>
+        <div class="zoneProposition"></div>
+
+        <div class="zoneSaisie">
+            <input type="text" id="inputEcriture" name="inputEcriture">
+        </div>
+
+        <div class="mesureScoreTemps">
+            <div class="zoneScore">
+                Score : <span>0</span>
+            </div>
+            <div class="zoneTemps">
+                <span>Temps : 0</span>
+            </div>
+        </div>
+
+        <div class="barreProgression">
+
+
+            <div class="barreNbProposition">
+            </div>
+
+            <div class="barreScore">
+            </div>
+        </div>
+
+        <div class="zoneBtnPopup">
+            <div class="zoneClassement">
+                <button id="btnClassement"><abbr title="Classement">🥇</abbr></button>
+            </div>
+            <div class="zoneProgression">
+                <button id="btnProgression"><abbr title="Progression">📶</abbr></button>
+            </div>
+            <div class="zonePartage">
+                <button id="btnShare"><abbr title="Partager">🗣</abbr></button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        Vers l'infini et au-delà ! 🚀
+    </footer>
+
+    <!-- Popup Nom du Joueur -->
+    <div class="popupNomDuJoueur">
+        <div class="popup">
+        </div>
+    </div>
+
+    <!-- Popup de partage -->
+    <div class="popupBackground">
+        <div class="popup">
+            <div>💬 Partage ton score</div>
+            <form id="formPartage">
+                <label for="nom">Ton nom</label>
+                <input type="text" id="nom" name="nom" placeholder="Ton nom">
+                <label for="email">Le mail de ton ami</label>
+                <input type="email" id="email" name="email" placeholder="nom@adresse.com">
+                <button id="btnEnvoyerMail">Envoyer</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Popup classement -->
+    <div class="popupClassement">
+        <div class="popup">
+            <div>🏆 Meilleurs Scores 🏆</div>
+            <div id="tableauClassement"></div>
+            <div class="zoneReinitialisation">
+                <button id="btnSuppressionDonnees">Réinitialiser</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup entrée dans classement -->
+    <div class="popupEntreeClassement">
+        <div class="popup">
+            <div>🤩 Génial!!</div>
+            <p>Ton score est dans le top 10 🎉</p>
+            <div class="zoneVoirClassement">
+                <button id="btnAllerVersClassement" type="submit" autofocus><abbr title="Classement">🥇</abbr></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="popupProgression">
+        <div class="popup">
+            <div>📈 Progression</div>
+            <canvas id="graphiqueProgression" width="300" height="300"></canvas>
+        </div>
+    </div>
+</body>
+
+</html>
