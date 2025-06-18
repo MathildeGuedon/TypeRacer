@@ -212,6 +212,7 @@ abbr {
 .zoneSaisie input[type="text"] {
     /* width: 75%; */
     border-radius: 20px;
+    text-align: center;
 }
 
 /* .zoneSaisie button {

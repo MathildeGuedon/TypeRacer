@@ -1,15 +1,16 @@
 # TypeRacer
 
-Améliore ta vitesse de frappe et deviens un pro du clavier avec TypeRacer! Une application ludique pour s'entraîner à taper des lettres ou des mots apparaissant à l'écran le plus vite possible sans regarder ton clavier.
+Améliore ta vitesse de frappe et deviens un pro du clavier avec TypeRacer! Une application ludique pour s'entraîner à taper des lettres ou des mots apparaissant à l'écran le plus vite possible sans regarder ton clavier.  
+🔗 <a href="https://mathildeguedon.github.io/TypeRacer" target="_blank" rel="noopener noreferrer">Voir l'application en ligne</a>
 
 ## Fonctionnalités
 
 - **Entraînement interactif** : Améliore ta dactylographie avec des lettres et des mots.
 - **Deux modes de jeu** : Chrono (1 minute pour un maximum de propositions) ou Défi (10 propositions en un minimum de temps).
-- **Compétition** : Plusieurs joueurs peuvent s'affronter et voir qui est le plus rapide.
+- **Compétition** : Plusieurs joueurs peuvent s'affronter à tour de rôle.
 - **Tableau des meilleurs scores** : Suis tes progrès et compare-toi aux autres.
 - **Graphique de progression** : Visualise ton amélioration au fil du temps.
-- **Partage** : Envoye un message à un ami et partage tes exploits.
+- **Partage** : Envoie un message à un ami et partage tes exploits.
 
 ## Installation
 
@@ -22,6 +23,7 @@ Ce projet est basé en partie sur le travail de David Pierru, OpenClassrooms (ht
 ## Licence
 
 Ce projet est sous licence CCBY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/).
+![Creative Commons](https://img.shields.io/badge/License-CC_BY--SA_4.0-ED592F?style=plastic&logo=creativecommons)
 
 ## Contact
 
