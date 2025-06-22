@@ -418,7 +418,7 @@ function terminerUnePartie(DictButton, nomJoueur, tempsFinal, choixListe, choixC
  * @param {string} scoreEnCours : le score. 
  */
 function afficherEmail(nomJoueur, adresseEmail, scoreEnCours) {
-    let mailto = `mailto:${adresseEmail}?subject=Partage de mon score TypeRacer&body=Salut, je suis ${nomJoueur} et je viens de réaliser le score ${scoreEnCours} sur le site de TypeRacer ! 😎`;
+    let mailto = `mailto:${adresseEmail}?subject=Partage de mon score TypeRacer&body=Salut, je suis ${nomJoueur} et je viens de réaliser le score de ${scoreEnCours} sur le site de TypeRacer ! 😎`;
     location.href = mailto;
 }
 
@@ -475,7 +475,7 @@ function gererFormulaire(scoreEnvoiEmail) {
     try {
         validerNom(nomPartage.value);
         validerEmail(email.value);
-        afficherEmail(nomPartage, email, scoreEnvoiEmail);
+        afficherEmail(nomPartage.value, email.value, scoreEnvoiEmail);
         afficherMessageErreur("", ".popupBackground .popup"); // s'il n'y a pas d'erreur, on efface l'éventuel message précédent
     }
     // affichage d'un message personnalisé en cas de détection d'une erreur
